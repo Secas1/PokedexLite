@@ -1,0 +1,6 @@
+PokemonInfo\Ability.class
+PokemonInfo\Pokedex.class
+PokemonInfo\Pokemon.class
+Main.class
+PokemonInfo\Pokemon$Type.class
+DBPokedex\DBPokedex.class

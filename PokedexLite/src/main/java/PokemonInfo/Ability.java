@@ -1,10 +1,12 @@
 package PokemonInfo;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Sebastian
  */
-public class Ability 
+public class Ability implements Serializable 
 {
     //================================================================================
     // Properties
@@ -60,11 +62,11 @@ public class Ability
         setEffect(effect);
     }  
     
-    private String showInfo()
+    public String showInfo()
     {
         StringBuilder information = new StringBuilder();
-        information.append("Name: ").append(getName());
-        information.append("Effect: ").append(getEffect()).append("\n");
+        information.append("Name: ").append(getName()).append("\n");
+        information.append("Effect: ").append(getEffect()).append("\n\n");
         
         return information.toString();
     }

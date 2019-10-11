@@ -85,7 +85,7 @@ public class Pokedex
         return null;
     }
     
-    public Pokemon findPokemon(int idPokedex)
+    private Pokemon findPokemon(int idPokedex)
     {
         for(Pokemon pokemon: getPokemonList())
         {
@@ -96,5 +96,39 @@ public class Pokedex
         }
         
         return null;
+    }
+    
+    public void addAbility(Ability ability)
+    {
+        this.abilitiesList.add(ability);
+    }
+    
+    public void addPokemon(Pokemon pokemon)
+    {
+        this.pokemonList.add(pokemon);
+    }
+    
+    public String showAllAbilities()
+    {
+        StringBuilder abilities = new StringBuilder();
+        
+        for(Ability ability : getAbilitiesList())
+        {
+            abilities.append(ability.showInfo());
+        }
+        
+        return abilities.toString();
+    }
+    
+    public String showAllPokemon()
+    {
+        StringBuilder pokemons = new StringBuilder();
+        
+        for(Pokemon pokemon : getPokemonList())
+        {
+            pokemons.append(pokemon.showInfo());
+        }
+        
+        return pokemons.toString();
     }
 }
